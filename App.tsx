@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
+import { AccessDOMElements } from './components/AccessDOMElements';
+import { StoringPreviousStateValues } from './components/StoringPreviousStateValues';
+import { Parent } from './components/TriggerActionFromParent/Parent';
+import { ChangeInputValue } from './components/ChangeInputValue';
+import { ChangeViewStyle } from './components/ChangeViewStyle';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<SafeAreaView style={{ flex: 1, padding: 8 }}>
+			{/* <AccessDOMElements /> */}
+			{/* <StoringPreviousStateValues /> */}
+			{/* <Parent /> */}
+			<ChangeInputValue />
+			<ChangeViewStyle />
+		</SafeAreaView>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
